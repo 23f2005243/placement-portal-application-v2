@@ -1,0 +1,37 @@
+Frontend:
+cd frontend
+npm install
+npm run dev 
+
+
+Backend:
+
+1. Backend Server
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 app.py
+
+2. Redis-Server
+cd backend
+source venv/bin/activate
+redis-server
+(if error: sudo systemctl stop redis)
+redis-server
+
+3. MailHog
+cd backend
+source venv/bin/activate
+~/go/bin/MailHog
+(UI: http://localhost:8025)
+
+4. Celery Worker
+cd backend
+source venv/bin/activate
+celery -A celery_worker.celery_app worker --loglevel=info
+
+5. Celery Beat
+cd backend
+source venv/bin/activate
+celery -A celery_worker.celery_app beat --loglevel=info

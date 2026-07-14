@@ -2,3 +2,6 @@ Flask
 Flask-SQLAlchemy
 Flask-JWT-Extended
 Flask-CORS
+Flask-Caching
+celery
+redis

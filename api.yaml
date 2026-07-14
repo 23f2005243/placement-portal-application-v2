@@ -1,0 +1,55 @@
+/api/company/register   POST    Registering a new company
+/api/student/register   POST    Registering a new student
+/api/company/login      GET     Authenticate company and generate session
+/api/company/<int:company_id>     GET     Displaying details of company on the dashboard
+/api/student/login      POST      Authenticate student and generate session
+/api/student/<int:student_id>   GET       Displaying details of student on the dashboard
+/api/student/edit-profile/<int:student_id>    PUT       Editing the student profile
+/api/admin/login        POST      Authenticate admin and generate session
+/api/admin/dashboard-stats      GET       Display the statistics on the admin dashboard like total companies etc
+/api/create/drive       POST      Creating a new placement drive by the company
+/api/company/view-drive/<int:drive_id>        GET       Viewing the drive details by the company
+/api/update/drive/<int:drive_id>      PUT      Edit placement drive by the company
+/api/delete/drive/<int:drive_id>      PUT     Soft delete the placement drive by the company
+/api/get/registered-companies       GET       Displaying registered companies on the admin dashboard
+/api/get/registered-students        GET       Displaying registered students on the admin dashboard
+/api/admin/<int:student_id>/activate/student      PUT       Activating student by the admin
+/api/admin/<int:student_id>/deactivate/student     PUT      Deactivating student by the admin
+/api/get/company-applications       PUT     Displaying all the company applications on the admin dashboard
+/api/admin/<int:company_id>/approve/company       PUT       Approving the company by the admin
+/api/admin/<int:company_id>/reject/company        PUT       Rejecting the company by the admin
+/api/admin/<int:company_id>/blacklist/company     PUT       Blacklisting the company by the admin
+/api/get/placement-drives         GET       Displaying the placement drives on the admin dashboard
+/api/admin/view-drive/<int:drive_id>        GET       Admin viewing the placement drive
+/api/admin/<int:drive_id>/approve/drive     PUT       Approving drive by the admin
+/api/admin/<int:drive_id>/reject/drive      PUT       Rejecting the drive by the admin
+/api/get/student-applications       GET      Displaying student applications on the admin dashboard
+/api/admin/view-application/<int:application_id>      GET       Admin viewing the student application
+/api/get/company/drives     GET       Displaying all the placement drives created by the company on its dashboard
+/api/company/view-applications/<int:drive_id>     GET       Company viewing all the applications for the specific drive
+/api/company/review-application/<int:application_id>          GET       Company reviewing the particular application
+/api/company/update-selection-status/<int:application_id>     PUT     Company to update the selection status
+/api/get/organizations    GET     Displaying the companies on the student dashboard
+/api/student/get/applied-drives       GET       Displaying the applied drives on the student dashboard
+/api/student/view-company/<int:company_id>      GET     Displaying the companys' placement drives on the student dashboard
+/api/student/view-drive/<int:drive_id>        GET       Student viewing the details of the placement drive
+/api/student/view-applied-drive/<int:drive_id>      GET       Student viewing the details of his/her applied drive
+/api/get/student/my-history       GET       Student viewing the placement history of his/her own
+/api/student/apply-drive/<int:drive_id>     GET, POST     Student applying for the drive
+/api/export/applications      GET       Student exports the placement history report
+/api/student/summary      GET     To display the summary on the student dashboard
+/api/company/summary      GET      To display the summary on the company dashboard
+/api/admin/summary        GET       To display the summary on the admin dashboard
+/api/admin/search/company     GET     Admin searching company
+/api/admin/search/student     GET     Admin searching student
+/api/get/student/eligible-drives      GET      Student filtering drives based on his/her eligibility
+
+
+
+
+
+
+
+
+
+

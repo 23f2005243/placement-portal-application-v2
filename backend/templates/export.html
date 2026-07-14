@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Application Report</title>
+</head>
+<body>
+    Hello {{username}},
+    <p>Here is the report of all your applications:</p>
+    <h3>Application Statistics:</h3>
+    <p>Total Applications: {{ total_applications }}</p>
+    <p>Total drives you got selected in: {{ total_selected }}</p>
+    <p>Total drives you got shortlisted in: {{ total_shortlisted }}</p>
+    <p>Total drives you got rejected in: {{ total_rejected }}</p>
+
+    <h3>Application Details:</h3>
+    <table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+        <th>Student ID</th>
+        <th>Company Name</th>
+        <th>Drive Title</th>
+        <th>Application Status</th>
+        <th>Applied Date</th>
+    </tr>
+
+    {% for application in applications %}
+    <tr>
+        <td>{{ application.sid }}</td>
+        <td>{{ application.cname }}</td>
+        <td>{{ application.job_title }}</td>
+        <td>{{ application.status }}</td>
+        <td>{{ application.application_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>

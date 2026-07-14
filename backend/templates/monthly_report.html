@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Placement Report</title>
+
+</head>
+
+<body>
+    Hello Admin,
+    <p>Here is the report of all the applications and placement statistics for this month:</p>
+
+    <h3>Placement Statistics Summary for the month of {{month}}:</h3>
+    <p>Total number of placement drives conducted in this month: {{ total_drives }}</p>
+    <p>Total number of students applied for the drive in this month: {{ total_applied }}</p>
+    <p>Total number of students selected for the drive in this month: {{ total_selected }}</p>
+    
+
+    <h3>Application Details for the month of {{month}}:</h3>
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Company Name</th>
+            <th>Job Title</th>
+            <th>Selection Status</th>
+            <th>Application Date</th>
+        </tr>
+
+        {% for application in applications %}
+        <tr>
+            <td>{{ application.student_id }}</td>
+            <td>{{ application.student_name }}</td>
+            <td>{{ application.company_name }}</td>
+            <td>{{ application.job_title }}</td>
+            <td>{{ application.status }}</td>
+            <td>{{ application.application_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
